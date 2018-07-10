@@ -1,0 +1,96 @@
+<!doctype html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<meta name="HandheldFriendly" content="true" />
+<head>
+<link href="css/main.css" rel="stylesheet">
+<link href="css/access.css" rel="stylesheet">
+</head>
+
+<body>
+
+<form name="form" method="post" action="https://bts.neots.co.kr:444/snsLogin/main/selectOAuthView.do">
+<input type="hidden" name="userid"         value=""> 
+<input type="hidden" name="userpassword"   value=""> 
+<input type="hidden" name="username"       value="">
+<input type="hidden" name="ap_type"        value="">
+<input type="hidden" name="auth_type"      value="manual">
+<input type="hidden" name="state" value="ManualAuth">
+
+<div class="wrap">
+
+	<div class="header">
+		<img src="images/logo.png" alt="BTS logo">
+	</div>
+	
+  <div class="socialArea">
+
+    <div class="loginBtn lineLoginBtn" onclick="fnLoginAction('line')">
+      <div class="lineImg"></div>
+      <div class="msg">Sign in with LINE</div>
+    </div>
+    
+    <div class="loginBtn goLoginBtn" id="customBtn" onclick="fnLoginAction('google')"><!-- 0710수정-->
+      <div class="goImg"></div>
+      <div class="msg txtGray">Sign in with Google</div>
+    </div>
+    
+    <div class="loginBtn fbLoginBtn" onclick="fnLoginAction('facebook')">
+      <div class="fbImg"></div>
+      <div class="msg">Sign in with Facebook</div>
+    </div>
+
+    <div class="loginBtn twLoginBtn" onclick="fnLoginAction('twitter')">
+      <div class="twImg"></div>
+      <div class="msg">Sign in with Twitter</div>
+    </div>
+
+    <div class="loginBtn inLoginBtn" onclick="fnLoginAction('instagram')">
+      <div class="inImg"></div>
+      <div class="msg">Sign in with Instagram</div>
+    </div>
+
+  </div><!-- socialArea -->
+
+  <div class="contents">
+    <ul>
+      <li>
+        <input class="First" type="text" id="user_fname" name="user_fname" placeholder="First name"> 
+        <input class="last" type="text" id="user_lname" name="user_lname" placeholder="Last name">
+      </li>
+
+      <li>
+        <select id="gender" name="gender">
+          <option value="">Gender</option>
+          <option id="M" value="M">Male</option>
+          <option id="F" value="F">Female</option>
+        </select>
+        <input type="text" id="age" name="age" maxlength="3" placeholder="Age">
+      </li>
+
+      <li>
+        <input type="text" id="email" name="email" placeholder="E-Mail"> 
+        <input type="text" id="phone" name="phone" placeholder="Phone number">
+      </li>
+    </ul>
+  </div><!-- contents -->
+
+  <div class="btnArea"> 
+    <input type="button" class="btn" id="btn" name="btn" onclick="submitAction()" value="Access">
+  </div>
+
+  <p class="copyright">
+    <label for="check">
+      <input type="checkbox" name="check" id="check"> For free wifi service your agree to our <a href="privacy_Policy_popup.html" onclick="window.open(this.href,'popup','width=320, height=800'); return false;">term & condition</a>
+    </label>
+  </p>
+
+  <div class="botLogo"><img src="images/bot_logo.png" alt="powerd by ALT telecom" /></div>
+
+</div><!-- wrap-->
+
+</form>
+
+
+</body>
+</html>
